@@ -1,0 +1,38 @@
+# Sous le capot d'une application JVM - JFR/JMC
+
+## Main info
+45' by Guillaume Darmont (Malt)
+
+see the conference here:
+
+TL;DR: 
+Une bonne démo sur la puissance de Java Flight Recorde et Java Mission Control pour savoir ce qui se passe dans la JVM, débugguer et optimiser les perfs de votre application 
+
+## Notes
+
+Monitoring d'une application au quotidien:
+- logs et métriques
+- traces distribuées
+- APM (Application Monitoring)
+
+### JFR
+Java Flight Recorder:
+- infos fournies par la JVM sur ces coimposants (mémoires, threads, temps d'éxecution)
+- config globale (1% overhead) ou conf spécifique pour choisir ce qu'on veut voir (3% overhead)
+- permet de voir plein d'infos: leak mémoire, garbage toll, lock, JIT, IO, Network...
+
+On peut générer un fichier JFR facilement:
+- -xx startFlightRecording
+- programmatiquement
+- jcmd $ pid
+
+On peut importer ce fichier directerment dans JMC ou bien écouter et procésser en continu
+
+### JMC
+Java Mission Control
+- dashboard avec vue live sur la JVM
+- peut importer les fichiers JFR pour voir ce qu'il se passe dans l'app
+
+### Bilan
+
+Globalkement c'est super fort JFR et JMC permet une analyse très poussée de ce qui se passe dans la JVM

@@ -1,0 +1,62 @@
+# Apache Pulsar
+
+## Main info
+45' par Julien Jakubowski (StreamNative)
+
+lien de la conf: 
+
+TL;DR: 
+Une intro aux technos de data streaming et et de messaging avec unb foicus Apache Pulsar VS kafka
+
+negatives:
+- Pas de démo
+
+## Quelques notes
+
+### Data streaming
+
+consiste à traiter un flux de donnée ordonné.  
+Faire des opérations de transformation d'aggrégation et de rétention.
+On parle de scalabilité horizontale (plusieurs noeuds)
+
+2 cas d'usages principaux:
+- Ingestion de données (de logs par exemple)
+- Analyse de données en temps réel
+
+Quelques technos:
+- Kafka
+- Pulsar
+
+
+### Messaging
+
+cas d'usages:
+- communicationb asynchrone entre services
+- tâche où l'on retrouve un découpage temporel
+
+On retrouve génaralement un producer/ un consumer
+
+Le traitement dans l'ordre n'est pas crucial
+
+Attentes:
+- elasticité 
+- système de dlq et de retry
+eviter les congestions
+
+Quelques technos:
+- RabbitMQ
+- JQS
+-Pulsar
+
+### Apachge pulsar
+Apache pulsar est une techno de Messaging et de data Streaming (contrairement à kafka qui a été conçu uniquement pour le dataStreaming)
+
+Avec kafka:
+- 2 consos qui se partagent le travail = 1 consumer group = autant de partitions que de consomateurs
+- message invalide -> file bloquée
+
+3 niveaux d'elasticité pour Pulsar:
+- nombre de message restant: opn peut facilement ajouter un nouveau consomateur (pas d'histoire de consumer group ou de partitions, le consomateur consommera les messages suivants)
+- surcharge broker: on peut facilement ajouter un nouveau noeud au broker (contrairement à kafka pas besoin de déplacer des données et perdre du temps à faire la miogration. On peut aussi facilement ajouter un nouveau noeud pour le stockage et pas besoin  de se soucier de l'espace disque)
+
+On peut faire de la réplication, du multi tenant, du tierced stockage (faire la différence entre les données chaudes stockées sur disque rapide et couteux des données froids stockée sur un s3 par exemple)

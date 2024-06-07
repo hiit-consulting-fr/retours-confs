@@ -16,3 +16,10 @@ Rejoignez-moi dans 45 minutes de live coding d’un système de commande en lign
 
 - github : https://github.com/HCaupert/temporal-talk
 - 500$ free credit: https://pages.temporal.io/event-devoxx-france-free-credits-with-takima.html
+
+## Some notes
+
+Temporal est un framework qui s'occupe de toute la plomberie de votre application. Vous n'avez plus qu'à vous concentrer sur votre Workflow métier.
+Remplace Kafka et les appels http, s'occupe de la communication entre services
+
+Utile dans le cas des Event Drive Architecture

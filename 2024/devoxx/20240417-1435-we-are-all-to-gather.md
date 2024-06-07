@@ -2,7 +2,7 @@
 ## Main info
 45' by Remi Forax (Université Eiffel, Paris)
 
-see the conference here:
+see the conference here: https://www.youtube.com/watch?v=UASse8a7FzE
 
 TL;DR: 
 Une bonne explication globale et un live coding de la nouvelle API Gather (dans les streams java) présente en preview sur java 22

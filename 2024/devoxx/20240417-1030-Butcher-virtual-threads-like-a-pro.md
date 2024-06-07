@@ -4,7 +4,7 @@
 ## Main info
 45' by Piotr Pryzbyl (Elastic)
 
-lien de la conf:
+lien de la conf: https://www.youtube.com/watch?v=8ZtYOTUU6d8
 
 TL;DR: 
 Virtual threads are one of the main features in java 21. This talks shows how NOT to use virtual threads.

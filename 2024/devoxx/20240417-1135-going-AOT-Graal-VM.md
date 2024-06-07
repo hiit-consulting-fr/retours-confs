@@ -3,7 +3,7 @@
 ## Main info
 45' by Alina Yurenko (Oracle)
 
-see the conference here:
+see the conference here: https://www.youtube.com/watch?v=ukY9Kzu6sc0
 
 TL;DR: 
 What is AOT and why you should use GraalVM in your current java project. With a nice demo.

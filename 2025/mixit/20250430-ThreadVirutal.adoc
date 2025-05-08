@@ -1,0 +1,94 @@
+= Thread Virtuel
+
+== Information principales
+
+2025/04/30 - 10h30
+
+https://www.youtube.com/watch?v=N4g61e1AV8c[Video du MixIT 2024]
+
+=== Historique des processeurs
+
+Augmentation de la fréquence des processeurs jusqu'en 2000
+
+Conséquence temps de traitement des instructions réduits
+
+La finesse de gravure suit la loi de Moore => taille des transistors de plus en plus petit
+
+À partir de 2000 compensation de la stagnation en fréquence par l'émergence du multi cœur
+
+Conséquence revoir la façon de coder les applications pour exploiter correctement le multi cœur
+
+En 2025 la finesse de gravure est de 4 nm (10^-9^) et la taille d'un atome est de 200 pm (10^-12^)
+
+=== Ressources
+
+https://fr.wikipedia.org/wiki/Chronologie_des_microprocesseurs[Chronologie des microprocesseurs]
+
+https://www.usinenouvelle.com/article/la-loi-de-moore-devrait-se-terminer-en-2030.N521364[Fin de la loi Moore en 2030 ?]
+
+=== Processus
+
+=== Thread
+
+1 Thread Java est égale à un Thread OS => Nommé Thread Plateform
+
+Initialisation 1 ms
+
+Consommation mémoire 2 Mo
+
+Changement de contexte (Context switching) 0,1 ms
+
+=== Thread Pool
+
+=== Serveur Web : 1 thread par requête
+
+=== Code bloquant / non bloquant
+
+=== Programmation réactive
+
+Elle est orienté message et donc non bloquante
+
+https://www.reactivemanifesto.org/fr[Manifest]
+
+== Mise à disposition des virtuals threads
+
+Arrivé dans le JDK 21
+
+.Projet Loom
+* Thread virtuel
+* Concurrence structurée
+* Scoped Values
+
+Bonne prise en charge dans les serveurs d'application
+
+.Exemple d'activation dans Tomcat
+[example]
+spring.threads.virtual.enabled=true
+
+
+Programmation réactive à 10 ans
+
+
+== Conclusion
+
+À utiliser uniquement quand l'application est limité par les I/O (I/O bounded). Dans ce cas cela permet de réduire le nombre de CPU nécessaire.
+
+Pas d'intérêt quand l'application est limité par le CPU
+
+== Resources
+
+=== JDK Enhancement Proposal (JEP)
+
+https://openjdk.org/jeps/444
+
+=== Podcasts
+
+https://inside.java/podcast/
+
+Ron Pressler fait parti de l'équipe qui a implémenté les threads virtuels
+
+=== Autres
+
+https://dev.java
+
+https://www.youtube.com/playlist?list=PLX8CzqL3ArzV4BpOzLanxd4bZr46x5e87[JEP café ]
